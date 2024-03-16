@@ -25,7 +25,7 @@
 
 **A04** Estratégias para textos longos
 
-## Sumário
+## 📜 Sumário
 
 - [O que são Prompts?](#o-que-são-prompts)
 - [Compreendendo as limitações do ChatGPT - Por que nem sempre as respostas são precisas?](#compreendendo-as-limitações-do-chatgpt---por-que-nem-sempre-as-respostas-são-precisas)
