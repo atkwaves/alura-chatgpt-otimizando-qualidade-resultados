@@ -33,8 +33,20 @@
   - [Prompts de Demonstração](#prompts-de-demonstração) 
   - [Prompts de Conclusão](#prompts-de-conclusão)
 - [Entendendo o que são tokens](#entendendo-o-que-são-tokens)
-
-  
+- [Boas práticas na escrita de prompts](#boas-práticas-na-escrita-de-prompts)
+  - [Uso de delimitadores para estruturar o prompt](#uso-de-delimitadores-para-estruturar-o-prompt)
+  - [Uso de caracteres especiais e acentos](#uso-de-caracteres-especiais-e-acentos)
+  - [Uso de sinais de pontuação](#uso-de-sinais-de-pontuação)
+  - [Uso de citações](#uso-de-citações)
+  - [Clareza e especificidade](#clareza-e-especificidade)
+  - [Fornecer contexto](#fornecer-contexto)
+  - [Evitar perguntas complexas](#evitar-perguntas-complexas)
+- [Estratégias avançadas para maximizar resultados com o ChatGPT](#estratégias-avançadas-para-maximizar-resultados-com-o-chatgpt)
+  - [Consultando instâncias múltiplas do modelo](#consultando-instâncias-múltiplas-do-modelo)
+  - [Análise de pontos em comum e diferenças](#análise-de-pontos-em-comum-e-diferenças)
+  - [Evitando pular etapas na análise](#evitando-pular-etapas-na-análise)
+  - [Atribuindo pontuações aos aspectos relevantes](#atribuindo-pontuações-aos-aspectos-relevantes)
+  - [Geração de novas ideias com base nas pontuações](#geração-de-novas-ideias-com-base-nas-pontuações)
 
 ## O que são Prompts?
 
@@ -126,3 +138,180 @@ gerar previsões sobre o próximo token.
 > **Observanção**: O número de tokens de entrada é limitado para garantir o bom desempenho do modelo e controlar 
 os custos computacionais. Se um prompt exceder o limite de tokens permitido, será necessário reduzi-lo ou dividir em partes 
 para se adequar ao limite.
+
+## Boas práticas na escrita de prompts
+
+### Uso de delimitadores para estruturar o prompt
+
+#### Três aspas duplas (`"""`) indicam um texto que não deve ser processado, facilitando a compreensão do modelo.
+
+Exemplo:
+
+```
+Dê um título para o texto abaixo:
+
+Texto:
+
+“””Python é uma linguagem de propósito geral de alto nível, multiparadigma, suporta o paradigma orientado a objetos, 
+imperativo, funcional e procedural. Possui tipagem dinâmica e uma de suas principais características é permitir a fácil 
+leitura do código e exigir poucas linhas de código se comparado ao mesmo programa em outras linguagens. “””
+
+Título:
+```
+
+#### Três crases (` ``` `) são usadas para marcar blocos de código.
+
+Exemplo:
+
+~~~
+Explique o código abaixo:
+
+```
+for i in range(5):
+   print(i)
+```
+~~~
+
+#### Sublinhados (`_____`) delimitam áreas para preenchimento, úteis para formatos de formulário.
+
+Exemplo:
+
+```
+Sugestão #k
+
+Título: _____
+Descrição: _____
+Ideia de thumbnail: _____
+Texto de thumbnail: _____
+Duração: _____
+Canais: _____, _____, _____
+Pontos fortes: _____, _____, _____
+
+Retorne 3 desses, cada um em seu bloco.
+```
+
+### Uso de caracteres especiais e acentos
+
+Utilizar acentos e caracteres especiais ao escrever em português ajuda o modelo a entender melhor o contexto da solicitação.
+
+Exemplo:
+
+```
+"Sobre o que é o livro 'Storytelling com Dados' da autora Cole Nussbaumer Knaflic?"
+```
+
+### Uso de sinais de pontuação
+
+Sinais de pontuação, como vírgulas, interrogações e pontos finais, ajudam a separar cláusulas e tornar o prompt mais
+legível e compreensível.
+
+Exemplo:
+
+```
+"Qual é a diferença entre as linguagens Python e R?"
+```
+
+### Uso de citações
+
+Aspas podem ser usadas para citar trechos relevantes de texto, especialmente em perguntas baseadas em citações.
+
+Exemplo:
+
+```
+"Qual é a mensagem principal transmitida por Machado de Assis em 'Dom Casmurro'?"
+```
+
+### Clareza e especificidade
+
+Ser claro e específico ao escrever o prompt ajuda o modelo a entender exatamente o que é solicitado e a gerar uma resposta
+precisa.
+
+Exemplo:
+
+```
+"Como é a sintaxe da linguagem de programação Python?"
+```
+
+### Fornecer contexto
+
+Informações adicionais ou contexto relevante ajudam o modelo a compreender melhor a pergunta e a gerar uma resposta mais
+precisa.
+
+Exemplo:
+
+```
+"Considere o seguinte trecho de código em Python. Qual é a saída esperada quando este código é executado?" (seguido pelo 
+código Python relevante)
+```
+
+### Evitar perguntas complexas
+
+Evitar perguntas complexas ou que exigem respostas detalhadas, dividindo-as em perguntas menores e mais simples.
+
+Exemplo:
+
+```
+"Explique brevemente o funcionamento do algoritmo de ordenação bubble sort."
+```
+
+## Estratégias avançadas para maximizar resultados com o ChatGPT
+
+### Consultando instâncias múltiplas do modelo
+
+Obter respostas de diferentes instâncias do ChatGPT amplia as opções disponíveis e oferece variedade de abordagens para 
+resolver problemas ou gerar ideias.
+
+Exemplo:
+
+```
+Solicitar três respostas de diferentes instâncias do ChatGPT para uma mesma pergunta, e comparar as abordagens sugeridas 
+por cada instância para identificar insights úteis e perspectivas diversas.
+```
+
+### Análise de pontos em comum e diferenças
+
+Analisar os pontos em comum e as diferenças entre as respostas do ChatGPT fornece insights valiosos e ajuda a compreender
+melhor o contexto do problema.
+
+Exemplo:
+
+```
+Comparar as respostas geradas pelo ChatGPT para identificar padrões, tendências ou variações na abordagem do problema.
+```
+
+### Evitando pular etapas na análise
+
+Revisar cuidadosamente as sugestões do ChatGPT é essencial para evitar erros simples e garantir a qualidade e precisão 
+dos resultados.
+
+Exemplo:
+
+```
+Verificar se o ChatGPT seguiu todas as etapas necessárias ao fornecer uma resposta, evitando assim conclusões precipitadas 
+ou incorretas.
+```
+
+### Atribuindo pontuações aos aspectos relevantes
+
+Atribuir pontuações aos aspectos relevantes das respostas do ChatGPT permite quantificar a eficácia de cada elemento e 
+identificar áreas de melhoria.
+
+Exemplo:
+
+```
+Avaliar a clareza, relevância e originalidade de cada resposta do ChatGPT, e atribuir uma pontuação de 0 a 100 para cada 
+resposta com base na sua viabilidade, inovação e potencial impacto, ajudando a priorizar e selecionar a abordagem mais 
+promissora.
+```
+
+### Geração de novas ideias com base nas pontuações
+
+Gerar novas ideias com base nas pontuações atribuídas aos aspectos relevantes das respostas do ChatGPT permite otimizar 
+a criatividade e maximizar a qualidade das soluções.
+
+Exemplo:
+
+```
+Criar uma nova proposta ou solução que aproveite os pontos fortes identificados nas respostas do ChatGPT, enquanto aborda 
+ou corrige eventuais pontos fracos.
+```
