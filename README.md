@@ -47,6 +47,13 @@
   - [Evitando pular etapas na análise](#evitando-pular-etapas-na-análise)
   - [Atribuindo pontuações aos aspectos relevantes](#atribuindo-pontuações-aos-aspectos-relevantes)
   - [Geração de novas ideias com base nas pontuações](#geração-de-novas-ideias-com-base-nas-pontuações)
+- [Explorando aplicações](#explorando-aplicações)
+  - [Resumos multilíngues](#resumos-multilíngues)
+  - [Analisando sentimentos](#analisando-sentimentos)
+  - [Transformando o tom de voz](#transformando-o-tom-de-voz)
+  - [Convertendo formatos](#convertendo-formatos)
+  - [Verificação ortográfica/verificação gramatical](#verificação-ortográficaverificação-gramatical)
+  - [Criando respostas automáticas para e-mails](#criando-respostas-automáticas-para-e-mails)
 
 ## O que são Prompts?
 
@@ -314,4 +321,101 @@ Exemplo:
 ```
 Criar uma nova proposta ou solução que aproveite os pontos fortes identificados nas respostas do ChatGPT, enquanto aborda 
 ou corrige eventuais pontos fracos.
+```
+
+## Explorando aplicações
+
+### Resumos multilíngues
+
+Resumir textos multilíngues envolve identificar o idioma original, solicitar um resumo nesse idioma e usar marcadores
+específicos para garantir a precisão da tradução automática.
+
+Exemplo:
+
+```
+Resuma o texto. O resumo deve ter uma frase:
+
+Texto: """Texto..."""
+
+Idioma:XXXXX 
+Resumo em XXXXX: ____
+```
+
+### Analisando sentimentos
+
+Analisar sentimentos envolve contextualizar o modelo, fornecer um exemplo de texto a ser analisado e solicitar uma
+resposta específica, como a classificação do sentimento em uma única palavra.
+
+Exemplo:
+
+```
+"Qual o sentimento da seguinte resenha de produto, que está delimitada por aspas?
+
+Dê a resposta com uma única palavra: "positivo", "misto", "neutro" ou "negativo".
+
+Texto: """Texto..."""
+
+Sentimento:
+```
+
+### Transformando o tom de voz
+
+Ajustar o tom de um texto, transformando-o de uma abordagem inicialmente crítica ou dura para uma mais amigável e equilibrada,
+por exemplo, permite transmitir uma opinião de forma mais respeitosa e acessível aos leitores ou seguidores, adaptando-se
+às necessidades de comunicação da situação.
+
+Exemplo:
+
+```
+Reescreva o texto abaixo delimitado por """, deixando seu tom de voz mais simpático e amigável:
+
+Texto: """Texto..."""
+```
+
+### Convertendo formatos
+
+Para converter dados de um tipo para outro, é crucial fornecer uma descrição precisa do problema e dos dados envolvidos.
+Isso inclui especificar o formato dos dados de entrada e o formato desejado de saída.
+
+Exemplo:
+
+```
+Temos alguns dados armazenados em um dicionário na linguagem X chamado “funcionários” . Escreva esses dados no formato CSV. 
+Retorne apenas o CSV.
+
+Entrada: Dados de entrada
+Saída:
+```
+
+### Verificação ortográfica/verificação gramatical
+
+É possível orientar o modelo a identificar e corrigir erros ortográficos, gramaticais e de pontuação, além de sugerir
+melhorias na estrutura e coesão das frases.
+
+Exemplo:
+
+```
+Revise e corrija o texto abaixo delimitado por """. Reescreva a versão corrigida.
+
+Texto: """Texto..."""
+```
+
+### Criando respostas automáticas para e-mails
+
+A criação de respostas automáticas para e-mails é solução eficiente para lidar com grandes volumes de correspondência
+eletrônica. Ao desenvolver prompts específicos para esse fim, é possível orientar o modelo a gerar respostas adequadas e
+personalizadas com base no conteúdo e no contexto de cada mensagem recebida.
+
+Exemplo:
+
+```
+Você é um assistente de IA de atendimento ao cliente. Sua tarefa é enviar uma resposta por e-mail a um(a) cliente. Dado 
+o e-mail do(a) cliente delimitado por """", gere uma resposta para agradecer ao cliente por sua avaliação. Se o sentimento 
+for positivo ou neutro, agradeça por sua revisão. Se o sentimento for negativo, peça desculpas e sugira que eles entrem 
+em contato com o atendimento ao cliente. Certifique-se de usar detalhes específicos da resenha. Escreva em um tom conciso 
+e profissional. Assine o e-mail como Atendimento ao cliente.
+
+Resenha: """Resenha..."""
+
+Sentimento da resenha:
 ```
