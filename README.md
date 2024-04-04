@@ -54,6 +54,10 @@
   - [Convertendo formatos](#convertendo-formatos)
   - [Verificação ortográfica/verificação gramatical](#verificação-ortográficaverificação-gramatical)
   - [Criando respostas automáticas para e-mails](#criando-respostas-automáticas-para-e-mails)
+- [Estratégias para textos longos](#estratégias-para-textos-longos)
+- [Playground](#playground)
+  - [System e Message](#system-e-message)
+  - [Ajustando as configurações](#ajustando-as-configurações)
 
 ## O que são Prompts?
 
@@ -419,3 +423,99 @@ Resenha: """Resenha..."""
 
 Sentimento da resenha:
 ```
+
+## Estratégias para textos longos
+
+Quando trabalhamos com textos grandes no GPT, precisamos **`dividir o conteúdo em partes menores`** para obter os melhores resultados. 
+Isso porque o GPT tem uma memória limitada (limite de caracteres para processamento). Podemos fazer isso manualmente, **`copiando 
+e colando em diferentes conversas (trabalho em paralelo)`** , ou automatizar o processo com ferramentas como o **LangChain**.
+
+> [**LangChain**](https://github.com/langchain-ai/langchain): Ferramenta que permite fazer cadeias longas de conversa com a 
+> I.A, o que é útil quando se atinge o limite e precisa manter a memória. Ela oferece estratégias, como manter um resumo 
+> na memória ou descartar os trechos mais antigos e manter os mais recentes. Essa escolha de estratégia permite manter uma 
+> conversa mais fluída com a IA.
+
+## Playground
+
+Ferramenta interativa dentro da [OpenAI Platform](https://platform.openai.com/), permitindo que os usuários experimentem 
+e explorem os modelos de linguagem da OpenAI de forma prática e direta. É um ambiente onde é possível interagir com o modelo 
+de linguagem, enviando perguntas ou prompts e recebendo respostas geradas pelo modelo em tempo real.
+
+### System e Message
+
+Quando alguém envia sua primeira mensagem para o GPT, o código envia uma mensagem oculta informando ao GPT que ele é um 
+assistente solícito. Isso acontece toda vez que uma conversa é iniciada. Essa mensagem, chamada de mensagem de sistema, 
+não é visível para o usuário, mas é crucial para definir o comportamento do GPT.
+
+Para acessá-la, é necessário ir para a seção **"Playground"**. Lá, a mensagem padrão do sistema pode ser encontrada na 
+área **"System"** à esquerda, onde está escrito: `"Você é uma assistente solícita"`.
+
+Na interação tradicional de chat, o usuário envia o texto e a instrução. No entanto, se houver muitas regras, o assistente 
+pode confundi-las com o texto e ignorá-las. Uma solução é enviar apenas as **`instruções`** no campo **"System"** e o 
+**`texto`** no campo **"User"**. Isso evita confusão entre as instruções e o texto, pois são mensagens distintas: uma vinda 
+do sistema e outra do usuário.
+
+Exemplo:
+
+Ao criar uma instrução no campo "system", solicitando um resumo do texto em 60 palavras, todas as mensagens do usuário 
+serão automaticamente resumidas para esse limite.
+
+~~~
+Primeiro, identifique o idioma.
+
+Resuma o texto em 60 palavras na língua original.
+
+A saída deve ser na forma:
+
+```
+Idioma: ""
+
+Resumo no idioma: ""
+```
+~~~
+
+### Ajustando as configurações
+
+A interface do ChatGPT é baseada na interação entre usuário e assistente, e permite configurar diversas características, 
+como:
+
+**`Modelo` 3.5 ou 4 do GPT;**
+
+**`Temperatura` da resposta, que determina o quão aleatória ou previsível será a resposta;**
+- Quando a temperatura é ajustada para zero, o modelo retorna conclusões idênticas ou muito semelhantes para o mesmo prompt, 
+aumentando a confiança do modelo e tornando as respostas mais precisas e determinísticas.
+- Aumentar a temperatura resulta em respostas menos previsíveis e mais diversas, pois diminui a confiança do modelo, permitindo 
+uma gama mais ampla de respostas, embora com menor certeza sobre sua precisão.
+
+**`Maximum Length` define o comprimento máximo que uma resposta pode ter;**
+- Quando um número limite é definido, o modelo interrompe a geração de texto assim que atinge esse limite de caracteres. 
+Essa funcionalidade é útil para controlar a extensão das respostas geradas e evitar resultados muito longos.
+
+**`Top P/Nucleus Sampling` técnica que controla a diversidade das respostas, levando em conta apenas as probabilidades das 
+palavras mais prováveis;**
+- Ao definir um valor para o Top P, como 1, por exemplo, o modelo seleciona as palavras mais prováveis até alcançar uma 
+probabilidade acumulada de 100%. Isso impede que o modelo gere respostas muito raras ou improváveis.
+
+**`Frequency Penalty` controla a repetição de tokens em uma resposta;**
+- Ao definir um valor mais alto para essa penalidade, o modelo é incentivado a evitar repetições excessivas, resultando 
+em respostas mais variadas e dinâmicas.
+
+**`Presence Penalty` controla a preferência do modelo por incluir ou evitar informações específicas nas respostas.**
+- Ao aumentar o valor do Presence Penalty, o modelo tende a evitar mencionar as palavras ou frases fornecidas como instrução 
+(prompt), gerando respostas que não incluem explicitamente essas informações.
+- Ao diminuir o valor do Presence Penalty ou defini-lo como zero, o modelo tem mais liberdade para incluir as informações 
+fornecidas nas respostas, o que pode resultar em respostas mais diretas e que mencionam explicitamente o solicitado.
+- Essa configuração pode ser útil para gerar respostas mais criativas, evitando depender excessivamente das informações 
+fornecidas. No entanto, é importante observar que um valor alto de Presence Penalty pode fazer com que o modelo ignore 
+completamente as informações fornecidas, especialmente em casos de instruções mais longas ou complexas.
+
+## Ferramentas
+
+<a href="https://chat.openai.com/">
+    <img loading="lazy" src="https://r2.easyimg.io/k0ygqngg0/chatgpt-icon.png" width="40" height="40" alt="ChatGPT Icon">
+</a>
+<br>
+
+## Referências
+
+[Documentação OpenAI](https://platform.openai.com/docs/introduction)
