@@ -1,12 +1,13 @@
 <h1>
     <a href="https://cursos.alura.com.br/course/chatgpt-otimizando-qualidade-resultados">
-     <img align="center" width="40px" src="https://www.alura.com.br/assets/api/cursos/chatgpt-otimizando-qualidade-resultados.svg"></a>
+     <img align="center" width="64px" src="https://www.alura.com.br/assets/api/cursos/chatgpt-otimizando-qualidade-resultados.svg">
+    </a>
     <span>
         Curso de ChatGPT: Otimizando a qualidade dos resultados
     </span>
 </h1>
 
-## 🔨 Objetivos
+## 🎯 Objetivos
 
 - Aprender como criar prompts no ChatGPT utilizando diferentes estratégias;
 - Utilizar boas práticas para obter resultados mais confiáveis;
@@ -511,11 +512,4 @@ completamente as informações fornecidas, especialmente em casos de instruçõe
 
 ## Ferramentas
 
-<a href="https://chat.openai.com/">
-    <img loading="lazy" src="https://r2.easyimg.io/k0ygqngg0/chatgpt-icon.png" width="40" height="40" alt="ChatGPT Icon">
-</a>
-<br>
-
-## Referências
-
-[Documentação OpenAI](https://platform.openai.com/docs/introduction)
+[![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/introduction)
