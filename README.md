@@ -510,6 +510,6 @@ fornecidas nas respostas, o que pode resultar em respostas mais diretas e que me
 fornecidas. No entanto, é importante observar que um valor alto de Presence Penalty pode fazer com que o modelo ignore 
 completamente as informações fornecidas, especialmente em casos de instruções mais longas ou complexas.
 
-## Ferramentas
+## 🔧 Ferramentas
 
 [![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/introduction)
